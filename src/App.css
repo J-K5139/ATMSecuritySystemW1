@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
-}
+*{
+  margin:0px;
+  padding:0px;
+ 
+ }
+ 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  /* background-color: black; */
+  width: 100vw;
+  height:100vh;
+  animation: theme 21s linear infinite;
+  /* background: url(https://i.imgur.com/wCG2csZ.png); */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-container:after, .main-container:before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100vmax;
+  height: 100vmax;
+  background: rgba(0, 0, 0, 0.05);
+  animation: background 90s linear infinite;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-container:after {
+  left: 15vw;
 }
-
-.App-link {
-  color: #61dafb;
+.main-container:before {
+  right: 15vw;
+  animation-delay: -30s;
+  animation-direction: reverse;
 }
-
-@keyframes App-logo-spin {
-  from {
+@keyframes theme {
+  0% {
+    background: #74c390;
+ }
+  16% {
+    background: #5dbdb6;
+ }
+  33% {
+    background: #59d4e1;
+ }
+  50% {
+    background: #51bce8;
+ }
+  66% {
+    background: #fa5374;
+ }
+  83% {
+    background: #e46653;
+ }
+  100% {
+    background: #74c390;
+ }
+}
+@keyframes background {
+  0% {
     transform: rotate(0deg);
-  }
-  to {
+ }
+  100% {
     transform: rotate(360deg);
+ }
+} 
+/*
+  .main-container{
+  margin:22px auto;
+  width:95%;
+  height:535px;
+  height:530px;
+  border-radius: 20px;
+  background-color:white; 
+   border-style:solid; 
+   border-color:red; 
+   border-width:15px;
+  background-image: url("./images/Theme1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ }*/
+ .name{ 
+  border-bottom-style:solid;
+  border-bottom-color:red;
+  border-bottom-width:15px;
+ }
+ .name-b{
+  padding-left:20px;
+  font-family:lato;
+  font-weight:900;
+  font-size:35px;
+  text-align: center;
+ }
+ @font-face{
+  font-family:"lato";
+  src:"Lato-Regular.ttf";
+ }
+ .main{
+  
+  height:428px;
+  width:100%;
+  margin-top:0px;
+ }
+ .buttons{
+  position:absolute;
+  align-items: center;
+  top:150px;
+  width:100%;
+  
+  
+ }
+ .pas{
+  position:absolute;
+  top:180px;
+  left:460px;
+ }
+ .pin{
+  height:50px;
+  width:400px;
+  margin-top:20px;
+  border-style:solid;
+  border-radius:30px;
+  border-color:black;
+  background-color:teal;
+  padding-left:20px;
+  outline:none;
+  color:white;
+  font-size:20px;
+ }
+ ::placeholder{
+  font-size:20px;
+ }
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   color:white;
+   opacity: 1; /* Firefox */
+ }
+ 
+ .buttons-left{
+  float:left;
+  width:50%;
+  display:inline;
+  margin-left: 453px;
+ }
+ .btn{
+  display:flex;
+  height:50px;
+  width:400px;
+  margin-top:20px;
+  border-style:solid;
+  border-radius:30px;
+  border-color:black;
+  background-color:teal;
+  color:white;
+  outline:none;
+  
+  
+ }
+ .btn:hover{
+  background-color:#9B9B9B;
+ }
+ .btn-text{
+  font-size:17px;
+  text-align:center;
+  font-weight:600;
+  padding-left:120px;
+  padding-top:9px;
+  outline:none;
+ }
+ .btn-text5{
+   font-size:22px;
+   text-align:center;
+   font-weight:600;
+   padding-left:157px;
+   padding-top:11px;
+   outline:none;
   }
-}
+ .buttons-left{
+  margin-left:160px;
+  margin-top:30px;
+  margin-left: 453px;
+ }
+ .buttons-right{
+  margin-left:0px;
+  margin-top:-210px;
+  
+ }
+ .btnOK{
+  width:100px;
+  height:55px;
+  border-style:solid;
+  border-top-right-radius:30px;
+  border-bottom-right-radius:30px;
+  border-color:black;
+  background-color:black;
+  color:white;
+  font-family:lato;
+  font-weight:900;
+  font-size:17px;
+  position:relative;
+  top:0px;
+  right:102px;
+  outline:none;
+ }
+ .btnOK5{
+   width:200px;
+   height:200px;
+   border-style:solid;
+   border-top-right-radius:30px;
+   border-bottom-right-radius:30px;
+   border-color:black;
+   background-color:black;
+   color:white;
+   font-family:lato;
+   font-weight:900;
+   font-size:17px;
+   position:relative;
+   top:0px;
+   right:102px;
+   outline: none;
+   margin-top: 25px;
+ margin-left: 200px;
+ }
+ .trans{
+   margin-left:40px;
+ }
+ .head1{
+  margin-right:100px;
+ }
+ .btnOK:hover{
+  background-color:white;
+  color:black;
+  outline:none;
+ }
+ .transcations{
+   position:absolute;
+  top:180px;
+  left:460px;
+  
+ }
+ .heading{
+  
+  text-align:center;
+  font-family:lato;
+  margin-top:40px;
+ }
